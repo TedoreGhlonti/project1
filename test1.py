@@ -1,23 +1,33 @@
 balance = 0
+history = [] 
 
 while True:
-    print("--- Mobile Balance ---")
+    print("\n--- Mobile Balance ---")
     print("1. Show Balance")
     print("2. Add Balance")
-    print("3. Log Out")
+    print("3. Transaction History")
+    print("4. Log Out")
 
-    choice = int(input('Please make your choice (1/2/3): '))
+    choice = input('Please make your choice (1/2/3/4): ')
 
-    if choice == 1:
-        print(f'Your Balance is: {balance}')
-    elif choice == 2:
+    if choice == "1":
+        print(f'Your Balance is: {balance} GEL')
+    elif choice == "2":
         amount = int(input('Please add to balance: '))
         balance += amount
-    elif choice == 3:
+        history.append(f"Added: {amount} GEL") 
+        print(f"Success! Current balance: {balance} GEL")
+    elif choice == "3":
+        print("\n--- History ---")
+        if not history:
+            print("No transactions yet.")
+        for item in history:
+            print(item)
+    elif choice == "4":
         print('Goodbye!')
         break
     else:
-        print('wrong parameters!')
+        print('Wrong parameters!')
     
     
 
