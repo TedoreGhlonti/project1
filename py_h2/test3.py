@@ -1,19 +1,20 @@
-inventory = {
-    "Apple": 10,
-    "Banana": 0,
-    "Orange": 5,
-    "Milk": 0
-}
+passengers = [
+    {"name": "Lasha", "items": ["phone", "laptop", "water"]},
+    {"name": "Unknown", "items": ["gun", "map"]},
+    {"name": "Mari", "items": ["book", "knife", "candy"]},
+    {"name": "Terminator", "items": ["sunglasses", "mission_file"]}
+]
 
-for key, value in inventory.items():
-    if value == 0:
-        print(f'{key} is out of stock!')
+for person in passengers:
+    if person["name"] == "Terminator":
+        print("SYSTEM FAILURE - TARGET IDENTIFIED!")
+        break
+    elif "gun" in person["items"] or "knife" in person["items"]:
+        print(f"Alert! {person['name']} is carrying dangerous items!")
+        continue
     else:
-        print(f'{key}: {value}')
+        print(f"Welcome, {person["name"]}! Have a nice flight!")
 
-inventory["Milk"] = 12
-inventory["Orange"] -= 2
-print(inventory)   
             
             
 
