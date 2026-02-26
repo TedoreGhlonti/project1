@@ -1,17 +1,23 @@
-bank_account = {
-    "owner": "Nino",
-    "balance": 500,
-    "status": "active",
-    "limit": 1000
-}
+students = [
+    {"name": "Lasha", "grades": [10, 9, 8]},
+    {"name": "Mari", "grades": [10, 10, 10]}
+]
 
-for k, v in bank_account.items():
-    if k == "balance" and v < 100:
-        print("Low balance alert!")
-    elif k == "status" and v == "blocked":
-        print("Contact the bank!")
-    elif k == "limit" and v > 500 and bank_account["balance"] > 400:
-        print("You are a VIP customer!")
+for student in students:
+    name = student["name"]
+
+    all_grades = student["grades"]
+
+    first_grade = all_grades[0]
+
+    print(f"{name}'s first grade is {first_grade}")
+   
+
+
+
+
+
+
 
             
             
