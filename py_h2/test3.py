@@ -1,19 +1,17 @@
-passengers = [
-    {"name": "Lasha", "items": ["phone", "laptop", "water"]},
-    {"name": "Unknown", "items": ["gun", "map"]},
-    {"name": "Mari", "items": ["book", "knife", "candy"]},
-    {"name": "Terminator", "items": ["sunglasses", "mission_file"]}
-]
+bank_account = {
+    "owner": "Nino",
+    "balance": 500,
+    "status": "active",
+    "limit": 1000
+}
 
-for person in passengers:
-    if person["name"] == "Terminator":
-        print("SYSTEM FAILURE - TARGET IDENTIFIED!")
-        break
-    elif "gun" in person["items"] or "knife" in person["items"]:
-        print(f"Alert! {person['name']} is carrying dangerous items!")
-        continue
-    else:
-        print(f"Welcome, {person["name"]}! Have a nice flight!")
+for k, v in bank_account.items():
+    if k == "balance" and v < 100:
+        print("Low balance alert!")
+    elif k == "status" and v == "blocked":
+        print("Contact the bank!")
+    elif k == "limit" and v > 500 and bank_account["balance"] > 400:
+        print("You are a VIP customer!")
 
             
             
