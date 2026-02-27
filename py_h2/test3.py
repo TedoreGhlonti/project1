@@ -1,16 +1,17 @@
-students = [
-    {"name": "Lasha", "grades": [10, 9, 8]},
-    {"name": "Mari", "grades": [10, 10, 10]}
+employees = [
+    {"name": "ნიკა", "role": "Developer", "salary": 2000},
+    {"name": "ანა", "role": "Manager", "salary": 3000},
+    {"name": "გიორგი", "role": "Developer", "salary": 2500}
 ]
 
-for student in students:
-    name = student["name"]
+for employee in employees:
+    if employee["role"] == "Developer":
+        employee["salary"] += 500
+    elif employee["role"] == "Manager":
+        employee["bonus"] = [100, 200]
+        employee["bonus"].append(500)
 
-    all_grades = student["grades"]
-
-    first_grade = all_grades[0]
-
-    print(f"{name}'s first grade is {first_grade}")
+print(employees)
    
 
 
