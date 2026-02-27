@@ -1,17 +1,20 @@
-employees = [
-    {"name": "ნიკა", "role": "Developer", "salary": 2000},
-    {"name": "ანა", "role": "Manager", "salary": 3000},
-    {"name": "გიორგი", "role": "Developer", "salary": 2500}
+cities = [
+    {"name": "Tbilisi", "population": 1100000},
+    {"name": "Batumi", "population": 170000},
+    {"name": "Kutaisi", "population": 140000}
 ]
+big_cities = []
+for city in cities:
+    if city["population"] > 500000:
+        city["is_big"] = "yes"
+        big_cities.append(city)
+    else:
+        city["is_big"] = "no"
 
-for employee in employees:
-    if employee["role"] == "Developer":
-        employee["salary"] += 500
-    elif employee["role"] == "Manager":
-        employee["bonus"] = [100, 200]
-        employee["bonus"].append(500)
-
-print(employees)
+    
+print(cities)
+print(big_cities)
+   
    
 
 
