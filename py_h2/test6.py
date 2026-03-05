@@ -6,13 +6,13 @@ inventory = [
 ]
 
 max_price = 0
-
+expensive_product = ""
 for item in inventory:
     if item["price"] > max_price:
         max_price = item["price"]
+        expensive_product = item["product"]
 
-
-print(max_price)
+print(f"Most expencive is {expensive_product} price: {max_price}")
 
 
 
