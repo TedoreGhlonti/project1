@@ -1,20 +1,30 @@
-inventory = [
-    {"product": "iPhone", "price": 1200},
-    {"product": "Samsung", "price": 900},
-    {"product": "MacBook", "price": 2500},
-    {"product": "Xiaomi", "price": 400}
-]
+hotel = {
+    "Room 101": {"status": "free", "price": 100},
+    "Room 102": {"status": "free", "price": 80},
+}
 
-max_price = 0
-expensive_product = ""
-for item in inventory:
-    if item["price"] > max_price:
-        max_price = item["price"]
-        expensive_product = item["product"]
+while True:
+    print("\n--- Hotel menu ---")
+    print("1. See all rooms")
+    print("2. Book room")
+    print("3. Exit")
+   
+    
+    choice = input("Choose option (1/2/3): ")
 
-print(f"Most expencive is {expensive_product} price: {max_price}")
-
-
-
-         
+    if choice == "1":
+        print(hotel)
+    
+    elif choice == "2":
+        room = input("Which room do you want? ")
+        if room in hotel and hotel[room]["status"] == "free":
+            hotel[room]["status"] = "occupied"
+            print(f"✅ {room} Booked!")
+        else:
+            print("❌ Room is booked or there is no room!.")
+            
+    elif choice == "3":
+        print("Bye!")
+        break  # ეს წყვეტს ციკლს და თიშავს პროგრამას
+    
         
