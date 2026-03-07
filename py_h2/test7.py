@@ -4,14 +4,12 @@ cars = [
     {"brand": "Audi", "model": "Q7", "price": 55000}
 ]
 
-# 1. ძებნის ფუნქცია
 def search_car(cars_list, brand_name):
     for car in cars_list:
         if car["brand"].lower() == brand_name.lower():
             return f"{car['brand']} {car['model']} price is: {car['price']}$"
     return "Brand not found!"
 
-# 2. დამატების ფუნქცია
 def add_new_car(cars_list):
     brand = input("enter brend: ")
     model = input("enter model: ")
