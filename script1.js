@@ -1,5 +1,6 @@
-let firstName = prompt('Please enter your firstname: ')
-let secondName = prompt('Please enter your secondname: ')
-let fullName = `${firstName} ${secondName}`
-console.log(`Hello, My fullname is ${fullName}`)
+let fruits = ["apple", "banana", "kiwi"];
 
+fruits.push("orange")
+for (let f = 0; f < fruits.length; f ++){
+    console.log(fruits[f])
+}
