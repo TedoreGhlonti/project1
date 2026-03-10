@@ -3,20 +3,20 @@ import shutil
 
 # 1. მიუთითე შენი "სავარჯიშო" საქაღალდის გზა
 # ყურადღება: შეცვალე 'C:/Users/User/Desktop/Test_Folder' შენი რეალური გზით
-folder_path = 'C:/Users/tedor/OneDrive/Desktop/Test_Folder'
+folder_path = 'D:\Minsk memories'
 
 # 2. შევქმნათ სამიზნე საქაღალდეების სახელები
 images_dir = os.path.join(folder_path, 'Images')
-docs_dir = os.path.join(folder_path, 'Documents')
+video_dir = os.path.join(folder_path, 'Videos')
 
 # 3. შევქმნათ ეს საქაღალდეები, თუ ისინი ჯერ არ არსებობს
 if not os.path.exists(images_dir):
     os.makedirs(images_dir)
     print("შეიქმნა საქაღალდე: Images")
 
-if not os.path.exists(docs_dir):
-    os.makedirs(docs_dir)
-    print("შეიქმნა საქაღალდე: Documents")
+if not os.path.exists(video_dir):
+    os.makedirs(video_dir)
+    print("შეიქმნა საქაღალდე: Videos")
 
 # 4. გადავუაროთ ფაილებს სათითაოდ
 for filename in os.listdir(folder_path):
@@ -32,8 +32,8 @@ for filename in os.listdir(folder_path):
             print(f"გადავიტანე სურათი: {filename}")
             
         # თუ დოკუმენტია
-        elif filename.lower().endswith(('.pdf', '.docx', '.txt')):
-            shutil.move(file_path, os.path.join(docs_dir, filename))
+        elif filename.lower().endswith(('.mp4',)):
+            shutil.move(file_path, os.path.join(video_dir, filename))
             print(f"გადავიტანე დოკუმენტი: {filename}")
 
 print("--- დახარისხება დასრულდა! ---")
