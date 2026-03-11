@@ -1,24 +1,25 @@
-users = [
-    {
-        "name": "Lasha",
-        "contacts": {"email": "lasha@gmail.com", "city": "Tbilisi"}
-    },
-    {
-        "name": "Mari",
-        "contacts": {"email": "mari@gmail.com", "city": "Batumi"}
-    }
-]
+# 1. გვაქვს ლექსიკონი
+accounts = {"Gogi": 100, "Ani": 50}
 
-def get_user_emails(user_list):
-    emails = []
-    for user in user_list:
-        new_email = user["contacts"]["email"]
-        emails.append(new_email)
+# 2. ვწერთ ფუნქციას
+def bank_system(database, user, amount):
+    if user in database:
+        database[user] += amount
+        
+    else:
+        database[user] = amount
 
-    return emails
+    return database
 
-result = get_user_emails(users)
-print(result)
+print(bank_system(accounts, "Lasha", 30))
+  
+    
+
+
+
+
+
+
 
 
 
