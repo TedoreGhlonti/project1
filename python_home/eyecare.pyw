@@ -4,7 +4,7 @@ from plyer import notification
 
 # 1. Configuration
 config = {
-    "interval": 20 * 60,  # 20 minutes (Real mode)
+    "interval": 60 * 60,  # 20 minutes (Real mode)
     "app_name": "Eye Care Assistant",
     "notification_title": "Time to Break! 👀"
 }
