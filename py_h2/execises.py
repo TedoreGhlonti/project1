@@ -1,23 +1,26 @@
-prices = [10, 20, 30]
+fruits = {
+    "apple": 130,
+    "avocado": 50,
+    "banana": 110,
+    "cantaloupe": 50,
+    "grapefruit": 60,
+    "grapes": 90,
+    "honeydew melon": 50,
+    "kiwifruit": 90,
+    "lemon": 15,
+    "lime": 20,
+    "nectarine": 60,
+    "orange": 80,
+    "peach": 60,
+    "pear": 100,
+    "pineapple": 50,
+    "plums": 70,
+    "strawberries": 50,
+    "sweet cherries": 100,
+    "tangerine": 50,
+    "watermelon": 80
+}
 
-def add_vat(price):
-    result = price * 1.18
-    return round(result, 2)
-
-def process_prices(price_list):
-    new_list = []
-    for p in price_list:
-       result = add_vat(p) 
-       new_list.append(result)
-    return new_list
-
-final_prices = process_prices(prices)
-
-print(final_prices)
-
-
-  
-
-
-
-
+user = input("Enter product name: ").lower()
+if user in fruits:
+    print(f"Item: {user}, Calories: {fruits[user]}")
