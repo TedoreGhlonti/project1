@@ -1,26 +1,41 @@
-fruits = {
-    "apple": 130,
-    "avocado": 50,
-    "banana": 110,
-    "cantaloupe": 50,
-    "grapefruit": 60,
-    "grapes": 90,
-    "honeydew melon": 50,
-    "kiwifruit": 90,
-    "lemon": 15,
-    "lime": 20,
-    "nectarine": 60,
-    "orange": 80,
-    "peach": 60,
-    "pear": 100,
-    "pineapple": 50,
-    "plums": 70,
-    "strawberries": 50,
-    "sweet cherries": 100,
-    "tangerine": 50,
-    "watermelon": 80
-}
+user_name = input("Please enter your name: ").strip().capitalize()
+balance = 500
 
-user = input("Enter product name: ").lower()
-if user in fruits:
-    print(f"Item: {user}, Calories: {fruits[user]}")
+while True:
+    print("\n" + "="*20)
+    print("      ATM MENU")
+    print("="*20)
+    print("1. Check Balance")
+    print("2. Withdraw Cash")
+    print("3. Exit")
+    
+    choice = input("\nPlease choose an option (1-3): ")
+    if choice == "1":
+        print(f"\nAccount Holder: {user_name}")
+        print(f"Current Balance: {balance} GEL")
+        
+    elif choice == "2":
+        withdraw_amount = int(input("\nEnter amount to withdraw: "))
+        
+        if withdraw_amount <= balance:
+            balance -= withdraw_amount
+            print("Successfully withdrawn!")
+            print(f"Remaining balance: {balance} GEL")
+        else:
+            print("Operation denied! Insufficient funds.")
+            
+    elif choice == "3":
+        print(f"\nThank you for using our service, {user_name}! Goodbye.")
+        break
+        
+    else:
+        print("\nInvalid choice! Please select 1, 2, or 3.")
+
+
+
+     
+       
+          
+
+
+
