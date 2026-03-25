@@ -1,9 +1,17 @@
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def get_myinfo(user_dict):
+    name = user_dict["name"]
+    age = user_dict["age"]
+    city = user_dict["city"]
+
+    return f"User {name} is {age} years old and lives in {city}"
+
+        
+user = {"name": "Tedore", "age": 44, "city": "Ozurgeti"}
+print(get_myinfo(user))
+        
 
 
-even_numbers = [n for n in numbers if n % 2 == 0]
 
-print(even_numbers)
 
 
 
