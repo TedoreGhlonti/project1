@@ -1,14 +1,34 @@
-# 1. პატარა ფუნქცია: უმატებს 5-ს
-def add_five(n):
-    return n + 5
+months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+]
 
-# 2. მთავარი ფუნქცია: აორმაგებს იმას, რასაც მიიღებს
-def double_number(number):
-    # აქ ვიძახებთ პირველ ფუნქციას! 
-    # ჯერ ემატება 5, მერე მრავლდება 2-ზე
-    result = add_five(number) * 2
-    return result
+while True:
+    date = input("Date: ").strip()
+    
+    try:
+        if "/" in date:
+            m, d, y = date.split("/")
+            month = int(m)
+            day = int(d)
+            year = int(y)
+        
+        elif "," in date:
+            new_date = date.replace(",", "")
+            m, d, y = new_date.split(" ")
+        
+            if m in months:
+                month = months.index(m) + 1
+                day = int(d)
+                year = int(y)
+            else:
+                continue
+        else:
+            continue
+        if 1 <= month <= 12 and 1 <= day <= 31:
+            print(f"{year}-{month:02}-{day:02}")
+            break
 
-# გამოძახება
-final_val = double_number(10)
-print(final_val) # დაბეჭდავს 30-ს (რადგან (10+5) * 2 = 30)
+    except (ValueError, NameError, IndexError):
+        pass
+
