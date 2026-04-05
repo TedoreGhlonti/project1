@@ -176,7 +176,7 @@ header {
     transition: 0.7s ease;
 }
 
-.bag_container {
+    .bag_container {
     width: 35px;
     height: 35px;
     display: flex;
@@ -360,9 +360,8 @@ header {
 
 }
 
-.section_banner_5 {
-    background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_467,c_limit/b5449146-ce0b-462f-bf97-67650e9183c6/nike-just-do-it.png);
-    background-position: center;
+.banner_basse {
+     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -370,102 +369,51 @@ header {
     align-items: flex-end;
     padding-bottom: 40px;
     padding-left: 40px;
+}
+
+.section_banner_5 {
+    background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_467,c_limit/b5449146-ce0b-462f-bf97-67650e9183c6/nike-just-do-it.png);
+   
 }
 
 .section_banner_6 {
     background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_467,c_limit/7cc8d3dc-56e8-4e6c-83c6-87e1a5b865cd/nike-just-do-it.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 40px;
-    padding-left: 40px;
+    
 }
 
 .section_banner_7 {
     background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_467,c_limit/e9097b94-cc80-4316-9cf2-dee76a1b0b52/nike-just-do-it.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 40px;
-    padding-left: 40px;
+   
 }
 
 .section_banner_8 {
     background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_467,c_limit/02c122bf-c286-4a71-b16d-618e25ebebee/nike-just-do-it.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 40px;
-    padding-left: 40px;
+
 }
 
 .section_banner_9 {
     background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_467,c_limit/0ddf45b9-cc38-4783-bc50-e5782b1cdee0/nike-just-do-it.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 40px;
-    padding-left: 40px;
+   
 }
 
 .section_banner_10 {
     background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_467,c_limit/6563d85b-844a-410c-a57f-cfe5108ed169/nike-just-do-it.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 40px;
-    padding-left: 40px;
+   
 }
 
 .section_banner_11 {
     background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_467,c_limit/276822a0-2d50-41fc-9431-0a66b1c8aff3/nike-just-do-it.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 40px;
-    padding-left: 40px;
+    
 }
 
 .section_banner_12 {
     background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_467,c_limit/8121a303-0994-41a0-8ebb-dcfa3b862bbd/nike-just-do-it.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 40px;
-    padding-left: 40px;
+   
 }
 
 .section_banner_13 {
     background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_467,c_limit/a9cebb9e-1486-4965-8ac4-42f9b3833590/nike-just-do-it.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 40px;
-    padding-left: 40px;
+  
 }
 
 .products_container {
