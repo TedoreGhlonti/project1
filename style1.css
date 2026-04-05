@@ -242,44 +242,33 @@ header {
     gap: 15px;
 }
 
-.section_banner_1 {
-    background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_1061,c_limit/82956428-9d58-48b9-81e1-47378548c0fb/nike-just-do-it.jpg);
+.banner-base {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end
+    align-items: flex-end;
+}
+
+.section_banner_1 {
+    background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_1061,c_limit/82956428-9d58-48b9-81e1-47378548c0fb/nike-just-do-it.jpg);
+
 }
 
 .section_banner_2 {
     background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_1061,c_limit/73756532-3a44-46ad-894b-a9b1ba08a37f/nike-just-do-it.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end
+   
 }
 
 .section_banner_3 {
     background-image: url(https://cdn.shopify.com/s/files/1/0603/3031/1875/articles/Nike_Air_Max_Day-2.jpg?v=1643944253);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end
+   
 }
 
 .section_banner_4 {
     background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_1061,c_limit/1c2c38c3-afef-4187-bc22-a75e88462681/nike-just-do-it.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end
+   
 }
 
 .small_banner_text {
