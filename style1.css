@@ -563,3 +563,87 @@ header {
     margin-top: 30px;
 }
 
+/* 960px და ქვემოთ */
+@media (max-width: 960px) {
+
+    /* 1. ნავიგაცია - ტექსტები და დაშორებები დავაპატარაოთ */
+    .nav_bar_menu ul {
+        gap: 10px;
+    }
+    
+    .center_menu_container ul {
+        gap: 15px;
+    }
+
+    /* ლოგოს კონტეინერი ცოტა დავაპატარავოთ */
+    .nav_logo_container {
+        width: 15%;
+    }
+
+    /* მენიუს კონტეინერს მეტი ადგილი მივცეთ */
+    .nav_bar_menu {
+        width: 80%; /* 30%-ის ნაცვლად */
+    }
+
+    /* ტექსტებს შორის დაშორება შევამციროთ */
+    .nav_bar_menu ul {
+        gap: 8px;
+        justify-content: flex-end; /* მარჯვნივ მივაკრათ */
+        padding-right: 15px;
+    }
+
+    .nav_bar_menu ul li a {
+        font-size: 11px; /* ტექსტიც დავაპატარავოთ */
+    }
+    
+    .center_menu_container ul li a {
+        font-size: 15px;
+    }
+
+    /* 2. მთავარი ბანერი - ტექსტი ცოტა დავაპატარაოთ, რომ არ "გაიჭრას" */
+    .banner_text {
+        width: 90%; /* ფიქსირებული 700px-ის ნაცვლად პროცენტი უკეთესია */
+    }
+
+    .banner_text h1 {
+        font-size: 40px;
+    }
+
+    /* 3. სექციის გრიდი - 2 სვეტი დავტოვოთ, მაგრამ სიმაღლე შევამციროთ */
+    .section_grid_container {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto; /* აუცილებელია, რომ კონტენტს მოერგოს */
+    }
+
+    .banner-base {
+        height: 350px; /* სურათები უფრო პატარა გამოჩნდეს */
+    }
+
+    /* 4. ფუტერი - 4 სვეტის ნაცვლად 2 სვეტი (რომ არ გაიჭედოს) */
+    .footer_grid_container {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        gap: 30px;
+        padding-bottom: 50px;
+    }
+    
+    .footer_list_1, .footer_list_2, .footer_list_3, .footer_list_4 {
+        width: 100%;
+        padding-left: 20px;
+    }
+}
+
+/* 600px და ქვემოთ (მობილურებისთვის) */
+@media (max-width: 600px) {
+    .section_grid_container {
+        grid-template-columns: 1fr; /* ყველაფერი ერთმანეთის ქვეშ */
+    }
+    
+    .footer_grid_container {
+        grid-template-columns: 1fr; /* ფუტერიც ერთ სვეტად */
+    }
+    
+    .center_menu_container {
+        display: none; /* მენიუ ქრება (აქ ბურგერ მენიუა საჭირო) */
+    }
+}
