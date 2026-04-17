@@ -1,12 +1,14 @@
-import sys
+numbers = [10, 27, 33, 44, 54]
+i = 0
+new_list = []
 
-reverse_words = []
+while i < len(numbers):
+    if numbers[i] % 2 != 0:
+        new_list.append(numbers[i])
 
-words = sys.argv[1:]
+    i += 1
 
-for w in words:
-    word = w[::-1]
+print(new_list)
 
-    reverse_words.append(word)
 
-print(reverse_words)
+
