@@ -1,12 +1,24 @@
-
 import requests
 
-payload = {"status": "alive", "species": "alien", "page": 2}
-res = requests.get("https://rickandmortyapi.com/api/character", params=payload)
+url = "https://pokeapi.co/api/v2/contest-effect/1/"
+
+res = requests.get(url)
+
+print(res)
 
 data = res.json()
-print(f"There are {data['info']['pages']} pages")
-print(f"There are {data['info']['count']} counts")
+
+
+for d in data["effect_entries"]:
+    print(d['language'])
+
+new_data = d['language']['url']
+print(new_data)
+
+
+
+
+
 
 
 
