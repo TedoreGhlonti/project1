@@ -9,6 +9,11 @@
       "password": "test1234",
       "balance": 0.0,
       "transactions": []
+    },
+    "alice": {
+      "password": "test1212",
+      "balance": 0.0,
+      "transactions": []
     }
   }
 }

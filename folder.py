@@ -56,10 +56,11 @@ def main():
         choice = input("Choose an option: ").strip()
         if choice == "1":
            register()
-           if user:
-              print(f"BAnking menu for '{user}' coming in the netx lection") 
+          
         elif choice == "2":
             user = login()
+            if user:
+              print(f"Banking menu for '{user}' coming in the next lection") 
         elif choice == "3":
             print("Goodbye!")
             return 
