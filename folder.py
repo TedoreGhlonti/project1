@@ -1,21 +1,71 @@
+import json
 import os 
+from getpass import getpass
+
+DB_FILE = "db.json"
+
+def load_db():
+    if not os.path.exists(DB_FILE):
+        return {"users": {}}
+    with open(DB_FILE, "r") as f:
+        return json.load(f)
+    
+def save_db(db):
+    with open(DB_FILE, "w") as f:
+        json.dump(db, f, indent=2)
 
 
-folder = "products"
+def register():
+    username = input("Choose a username: ").strip()
+    if not username:
+        print("Username cannot be empty.")
+        return
+    db = load_db()
+    if username in db["users"]:
+        print("That username is already taken.")
+        return
+    password = getpass("Choose a password: ")
+    if not password:
+        print("Password cannot be empty.")
+        return
+    db["users"][username] = {
+        "password": password,
+        "balance": 0.0,
+        "transactions": [],
+    }
+    save_db(db)
+    print(f"Account created for '{username}'")
 
-if not os.path.exists(folder):
-    os.mkdir(folder)
-    print(f"Folder {folder} created!")
-else:
-    print(f"Folder {folder} already exist!")
+def login():
+    username = input("Username: ").strip()
+    password = getpass("Password: ")
+    db = load_db()
+    user = db["users"].get(username)
+    if user is None or user["password"] != password:
+        print("Invalid username or password")
+        return None
+    print(f"Welcome back, {username}")
+    return username
 
-item = input("What product? ")
-count = input("How many? ")
+def main():
+    while True:
+        print("\n=== Simple Bank ===")
+        print("1. Register")
+        print("2. Login")
+        print("3. Quit")
+        choice = input("Choose an option: ").strip()
+        if choice == "1":
+           register()
+           if user:
+              print(f"BAnking menu for '{user}' coming in the netx lection") 
+        elif choice == "2":
+            user = login()
+        elif choice == "3":
+            print("Goodbye!")
+            return 
+        else:
+            print("Invalid choice.")
+            
 
-with open("products/products.txt", "a") as f:
-    f.write(f"{item}: {count}\n")
-
-print("___ current products list ___")
-with open("products/products.txt", "r") as f:
-    for line in f:
-        print(line.rstrip())
+if __name__ == "__main__":
+   main()

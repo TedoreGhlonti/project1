@@ -1,3 +1,0 @@
-banana: 15
-apple: 10
-kiwi: 20

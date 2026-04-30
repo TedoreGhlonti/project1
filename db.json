@@ -1,0 +1,14 @@
+{
+  "users": {
+    "tedore": {
+      "password": "test123",
+      "balance": 0.0,
+      "transactions": []
+    },
+    "bob": {
+      "password": "test1234",
+      "balance": 0.0,
+      "transactions": []
+    }
+  }
+}
