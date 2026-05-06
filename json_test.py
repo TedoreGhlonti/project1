@@ -1,36 +1,21 @@
 import json
-import os
 
-DB_FILE = "my_car.json"
-
-def save_data(data):
-    with open(DB_FILE, "w") as file:
-        json.dump(data, file, indent=4)
-    print("--- მონაცემები წარმატებით შეინახა ---")
-
-def load_data():
-    if not os.path.exists(DB_FILE):
-        return {} 
-    
-    with open(DB_FILE, "r") as file:
-        return json.load(file)
-
-initial_car = {
-    "brand": "Toyota",
-    "model": "Camry",
-    "year": 2022,
-    "owners": ["Tedore"]
+me = {
+    "name": "Tedore",
+    "age": 25,
+    "city": "Ozurgeti",
+    "skills": ["Python", "Farming", "Logic"]
 }
 
-save_data(initial_car)
+db_file = "me.json"
 
-my_car = load_data()
+with open(db_file, "w") as f:
+    json.dump(me, f, indent=2)
 
-my_car["owners"].append("Giorgi")
-my_car["year"] = 2024
+print(f"File {db_file} created!")
 
-save_data(my_car)
+with open(db_file, "r") as f:
+    data = json.load(f)
 
-final_data = load_data()
-print(f"Owners: {final_data['owners']}")
-print(f"Year: {final_data['year']}")
+print(data)
+
