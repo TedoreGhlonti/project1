@@ -1,10 +1,22 @@
 [
-  {
-    "name": "Gio",
-    "score": 90
-  },
-  {
-    "name": "Nika",
-    "score": 80
-  }
+    {
+        "name": "Gio",
+        "score": 90
+    },
+    {
+        "name": "Nika",
+        "score": 80
+    },
+    {
+        "name": "tedore",
+        "score": 85
+    },
+    {
+        "name": "anna",
+        "score": 83
+    },
+    {
+        "name": "Lasha",
+        "score": 80
+    }
 ]
