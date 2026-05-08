@@ -1,0 +1,20 @@
+{
+  "fruits": {
+    "banana": {
+      "fruit": "banana",
+      "quantity": 0.0
+    },
+    "apple": {
+      "fruit": "apple",
+      "quantity": 0.0
+    },
+    "kiwi": {
+      "fruit": "kiwi",
+      "quantity": 0.0
+    },
+    "orange": {
+      "fruit": "orange",
+      "quantity": 0.0
+    }
+  }
+}
