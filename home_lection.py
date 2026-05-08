@@ -1,20 +1,18 @@
-import sys
-
 import requests
 
-import random
+url = "https://jsonplaceholder.typicode.com/users"
 
-if len(sys.argv) < 2:
-    sys.exit('Please enter something!')
-res = requests.get("https://itunes.apple.com/search?entity=song&limit=10&term=" + sys.argv[1])
+res = requests.get(url)
 
 data = res.json()
 
-song_list = data['results']
-
-if song_list:
-    random_song = random.choice(song_list)
-    print(f"Recommended song by {sys.argv[1]}: {random_song['trackName']} 🎶")
+for user in data:
+    print(f"{user['name']} works at {user['company']['name']}\n"
+          f"Website: {user['website']}"
+          )
+    
+    print("-" * 30)
+    
 
 
 
