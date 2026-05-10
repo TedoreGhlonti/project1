@@ -1,30 +1,41 @@
-class Smartphone:
-    def __init__(self, brand, battery):
-        self.brand = brand
-        self.battery = battery
+class Robot:
+    def action(self):
+        
+        return "I am a robot, I help people."
+    
+class CleanerRobot(Robot):
+    def action(self):
+        return "I am cleaning the floor."
+    
+class CookRobot(Robot):
 
-    def play_game(self):
-        if self.battery >= 20:
-            self.battery -= 20
-            return "Playing game... 🎮"
-        else:
-            return "Battery too low! 🪫"
+    def action(self):
+        return "I am cooking dinner."
+    
 
-    def charge(self):
-        self.battery += 10
-        if self.battery > 100: self.battery = 100 # ლიმიტი 100%
-        return "Charging... ⚡"
+basic_robot = Robot()
+cool_robot = CleanerRobot()
+other_robot = CookRobot()
 
-    def check_status(self):
-        return f"Brand: {self.brand} | Battery: {self.battery}%"
+print(basic_robot.action())
+print(cool_robot.action())
+print(other_robot.action())
+        
 
-# ტესტირება
-phone = Smartphone("Honor", 87)
 
-print(phone.play_game())     # დაიბეჭდება: Playing game...
-print(phone.check_status())  # დაიბეჭდება: Brand: Honor | Battery: 67%
-print(phone.charge())        # დაიბეჭდება: Charging...
-print(phone.check_status())  # დაიბეჭდება: Brand: Honor | Battery: 77%
+        
+        
+        
+        
+        
+
+        
+
+
+        
+        
+
+        
 
         
         
