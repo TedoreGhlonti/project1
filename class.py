@@ -1,25 +1,34 @@
-class Accaunt():
+class Smartphone():
+    def __init__(self, model):
+        self.model = model
+        self.battery = 100
 
-    def __init__(self, balance):
+    def use_app(self, cost):
+        self.battery -= cost
+        
+        # თუ ბატარეა 0-ს ჩამოსცდა
+        if self.battery <= 0:
+            self.battery = 0
+            print("Phone is dead")
 
-        self.balance = balance
+    def charge(self, amount):
+        self.battery += amount
+        
+        # თუ ბატარეა 100-ს გადასცდა
+        if self.battery > 100:
+            self.battery = 100
 
-    def deposit(self, amount):
+my_phone = Smartphone("Samsung")
+my_phone.use_app(120) # ვაკლებთ იმაზე მეტს, რაც გვაქვს
+print(f"Battery: {my_phone.battery}%") # დაბეჭდავს 0-ს და არა -20-ს
 
-        self.balance += amount
-    
-    def withdraw(self, amount):
 
-        self.balance -= amount
-    
-    def display(self):
-
-        return f"Current balance: {self.balance}"
-    
-result = Accaunt(500)
-result.deposit(200)
-result.withdraw(100)
-print(result.display())
+        
+        
+        
+        
+        
+        
 
         
         
