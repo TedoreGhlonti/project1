@@ -1,26 +1,36 @@
-class Fruit:
-    fruits_list = []
+class Car:
 
-    def __init__(self, item, price, quantity):
-        self.item = item
-        self.price = price
-        self.quantity = quantity
+    def __init__(self, brand, year, color):
+        self.brand = brand
+        self.year = year
+        self.color = color
+
+class Lightcar(Car):
+
+    def action(self, speed):
+     message = f"You are driving {self.year} {self.brand} at {speed} km/h."
+     if speed > 120:
+        return message + " WARNING: Slow down!"
+    
+    
+     return message + " Normal speed!"
         
-        Fruit.fruits_list.append(self)
+    def car_age(self):
+     current_year = 2026
+     age = current_year - self.year
+     return f"This {self.brand} is {age} years old."
 
-class List(Fruit):
-    def info(self):
-        total = self.price * self.quantity
-        return f"Item: {self.item:<7} | Total Value: {total:>6} GEL"
-
-
-fr1 = List("Apple", 2.5, 30)
-fr2 = List("Banana", 3.5, 35)
-fr3 = List("Kiwi", 2.8, 45)
-
-print("--- Fruits Detailed List ---")
-for f in Fruit.fruits_list:
-    print(f.info())
+car1 = Lightcar("Mercedes", 2025, "black")
+car2 = Lightcar("Audi", 2024, "red")
+car3 = Lightcar("Mustang", 2023, "red")
+print(car1.action(90))
+print(car1.car_age())
+print(car2.action(140))
+print(car2.car_age()) 
+print(car3.action(150))
+print(car3.car_age())       
+        
+        
         
         
 
